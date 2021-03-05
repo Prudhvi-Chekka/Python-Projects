@@ -1,0 +1,21 @@
+Requirements:
+
+The below is the structure of fixed-length file:
+1-6 => Transaction Id  (6-chars)
+7-12 => Customer Id  (6-chars)
+13-32 => Customer Name (20-chars)
+33-37 => Customer Addr Id (5 chars)
+38-44 => Product Id (7 chars)
+45-74 => Product Nm (30 chars)
+75-80 => ProductPrice (6 chars)
+81-84 => ProductQuantity (4 chars)
+85-96 => Status (12 chars)
+97-116   => Transaction time stamp (20 chars)
+117-127 => Ordered Date (11 chars)
+128-138 => Shipment Date (11 chars)
+139-149 => Delivered Date (11 chars) 
+
+
+-> Parse this file and get data and insert into Transaction table.
+-> Maintain history data - generate sequence number to have as primary key - to maintain all transactions
+-> The latest transaction timestamp for a transaction should have ACTIVE_IND as Y. (new column)
